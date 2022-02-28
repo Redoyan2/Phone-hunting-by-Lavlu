@@ -8,7 +8,7 @@ const searchMobile = () => {
         .then(res => res.json())
         .then(data => findMobile(data.data))
 }
-searchMobile();
+
 const showDiv = document.getElementById('show-div');
 const findMobile = (props) => {
     props.forEach(element => {
@@ -20,7 +20,7 @@ const findMobile = (props) => {
         <div class="card-body">
             <h3 class="card-title">${element.phone_name}</h3>
              <h5 class="card-title"><span>Brand:</span> ${element.brand}</h5>
-            <button class="myBtn" onclick=callDetailsShow('${element.slug}')>Details</button>
+            <button class="myBtn02" onclick=callDetailsShow('${element.slug}')>Details</button>
          </div>
     </div>
         `

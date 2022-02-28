@@ -13,10 +13,19 @@ span{
 }
 .myBtn{
     background-color: darkcyan;
+    font-size: 28px;
     color: white;
-    padding: 2px 7px ;
+    padding: 5px 20px ;
     border-radius: 5px;
-    font-size:larger;
+    
+}
+.myBtn02{
+    background-color: darkcyan;
+    font-size: 20px;
+    color: white;
+    padding: 3px 10px ;
+    border-radius: 5px;
+    
 }
 
 #show-div{
@@ -33,9 +42,13 @@ span{
     text-align: center;
     width: 20%;
     background-color: aquamarine;
+    border-radius: 10px;
 }
 .card-deck{
     margin: auto;
+    padding-bottom: 15px;
+    border-radius: 17px;
+    
 }
 
 
