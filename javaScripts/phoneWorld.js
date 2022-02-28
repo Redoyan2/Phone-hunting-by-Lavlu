@@ -3,15 +3,49 @@
 const searchMobile = () => {
     const mobileName = document.getElementById('name-input').value;
     const url = `https://openapi.programming-hero.com/api/phones?search=${mobileName}`;
-    console.log(url);
     fetch(url)
-    
+
         .then(res => res.json())
         .then(data => findMobile(data.data))
 }
-
+searchMobile();
+const showDiv = document.getElementById('show-div');
 const findMobile = (props) => {
     props.forEach(element => {
-        console.log(element)
+        const div = document.createElement('div');
+        div.classList.add('div-class')
+        div.innerHTML = `
+    <div class="card-deck" style="width: 25rem;">
+                <img src="${element.image}">
+        <div class="card-body">
+            <h3 class="card-title">${element.phone_name}</h3>
+             <h5 class="card-title"><span>Brand:</span> ${element.brand}</h5>
+            <button class="myBtn" onclick=callDetailsShow()>Details</button>
+         </div>
+    </div>
+        `
+        showDiv.appendChild(div)
+
+      
     });
+
+   
+}
+
+const callDetailsShow=(props)=>{
+    const url = `https://openapi.programming-hero.com/api/phone/${props}`
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>showDetails(data.data))
+ 
+}
+
+
+const showDetails=(details)=>{
+    console.log('clisk details')
+// popup 
+var popup = document.getElementById("myPopup");
+popup.classList.toggle("show");
+ 
+
 }
