@@ -1,0 +1,20 @@
+.color01{
+    background-color: bisque;
+}
+.color02{
+    color: white;
+}
+.color03{
+    background-color: rgb(5, 65, 73);
+}
+
+span{
+    color: crimson;
+}
+.myBtn{
+    background-color: darkcyan;
+    color: white;
+    padding: 2px 7px ;
+    border-radius: 5px;
+    font-size:larger;
+}
