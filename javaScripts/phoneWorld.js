@@ -20,7 +20,7 @@ const findMobile = (props) => {
         <div class="card-body">
             <h3 class="card-title">${element.phone_name}</h3>
              <h5 class="card-title"><span>Brand:</span> ${element.brand}</h5>
-            <button class="myBtn" onclick=callDetailsShow()>Details</button>
+            <button class="myBtn" onclick=callDetailsShow('${element.slug}')>Details</button>
          </div>
     </div>
         `
@@ -42,10 +42,22 @@ const callDetailsShow=(props)=>{
 
 
 const showDetails=(details)=>{
-    console.log('clisk details')
-// popup 
-var popup = document.getElementById("myPopup");
-popup.classList.toggle("show");
- 
+    console.log(details)
+const detailsArea = document.getElementById('details-area');
+detailsArea.classList.add('detail-area');
+const div = document.createElement('div');
+div.innerHTML=`
+<div class="card-deck" style="width: 25rem;">
+<img src="${details.image}">
+<div class="card-body">
+<h3 class="card-title">${details.name}</h3>
+<h5 class="card-title"><span>Brand:</span> ${details.mainFeatures.chipSet}</h5>
+<h5 class="card-title"><span>Brand:</span> ${details.mainFeatures.displaySize}</h5>
+<h5 class="card-title"><span>Brand:</span> ${details.mainFeatures.memory}</h5>
+</div>
+</div>
+`
+detailsArea.appendChild(div);
+
 
 }
