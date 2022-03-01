@@ -72,6 +72,7 @@ const callDetailsShow = (props) => {
 
 
 const showDetails = (details) => {
+    console.log(details);
     detailsArea.innerText='';
     detailsArea.classList.add('detail-area');
     const div = document.createElement('div');
@@ -83,6 +84,7 @@ const showDetails = (details) => {
 <h5 class="card-title"><span>Chipset:</span> ${details.mainFeatures.chipSet}</h5>
 <h5 class="card-title"><span>Display:</span> ${details.mainFeatures.displaySize}</h5>
 <h5 class="card-title"><span>Memory:</span> ${details.mainFeatures.memory}</h5>
+<h5 class="card-title"><span>Releasedate:</span> ${details.releaseDate}</h5>
 </div>
 </div>
 `
