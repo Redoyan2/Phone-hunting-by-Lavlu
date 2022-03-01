@@ -24,7 +24,6 @@ sliderArea.innerText='';
         
         errorBox.innerText = 'Please write a valid mobile name or brand name!!!!'
         showDiv.innerText='';
-        sliderArea = document.getElementById('slider-area');
     }
 }
 

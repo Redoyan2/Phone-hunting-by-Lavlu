@@ -57,17 +57,20 @@ span{
 }
 
 
-/* .influencer-section{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 50px;
-    justify-content:center;
-    align-items: center;
-}
 
-.influencer-section{
+/* @media only screen and (max-width:688px){
+ #show-div{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
-    align-items: center;
- } */
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    }
+} */
+
+
+@media (max-width: 620px){
+    #show-div{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
