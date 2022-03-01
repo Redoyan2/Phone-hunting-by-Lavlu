@@ -2,6 +2,7 @@
 const showDiv = document.getElementById('show-div');
 const errorBox = document.getElementById('error-box');
 const detailsArea = document.getElementById('details-area');
+const sliderArea = document.getElementById('slider-area');
 const searchMobile = () => {
     showDiv.innerText='';
     detailsArea.innerText='';
@@ -15,13 +16,15 @@ const searchMobile = () => {
             .then(res => res.json())
             .then(data => findMobile(data.data))
 errorBox.innerText='';
+sliderArea.innerText='';
     }
 
 
     else {
         
-        errorBox.innerText = 'Please write a valid mobile name!!!!'
+        errorBox.innerText = 'Please write a valid mobile name or brand name!!!!'
         showDiv.innerText='';
+        sliderArea = document.getElementById('slider-area');
     }
 }
 
@@ -30,8 +33,9 @@ errorBox.innerText='';
 const findMobile = (props) => {
     if (props.length == 0) {
         
-        errorBox.innerText = 'Please write a valid mobile name!!!!'
+        errorBox.innerText = 'Please write a valid mobile name or brand name!!!!'
         showDiv.innerText='';
+        
     }
     else {
         props.forEach(element => {
@@ -48,6 +52,7 @@ const findMobile = (props) => {
         </div>
             `
         errorBox.innerText='';
+        sliderArea.innerText='';
      showDiv.appendChild(div)
 
 

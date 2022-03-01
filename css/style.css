@@ -50,6 +50,11 @@ span{
     border-radius: 17px;
     
 }
+#error-box{
+    text-align: center;
+    color: white;
+    background-color: crimson;
+}
 
 
 /* .influencer-section{
